@@ -95,6 +95,9 @@ platform_do_upgrade() {
 		remove_oem_ubi_volume squashfs
 		nand_do_upgrade "$1"
 		;;
+  	redmi,ax3000)
+		mi_dualboot_do_upgrade "$1"
+		;;
 	*)
 		default_do_upgrade "$1"
 		;;
