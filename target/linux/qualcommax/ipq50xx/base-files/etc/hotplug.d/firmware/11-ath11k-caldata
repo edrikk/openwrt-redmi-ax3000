@@ -34,6 +34,12 @@ case "$FIRMWARE" in
 		caldata_extract "0:ART" 0x1000 0x20000
 		;;
 	esac
+"ath11k/IPQ5018/hw1.0/caldata.bin")
+	case "$board" in
+	redmi,ax3000)
+		caldata_extract "0:ART" 0x1000 0x20000
+		;;
+	esac
 	;;
 "ath11k/QCN6122/hw1.0/cal-ahb-b00a040.wifi1.bin")
 	case "$board" in
@@ -55,6 +61,20 @@ case "$FIRMWARE" in
 		ath11k_remove_regdomain
 		ath11k_set_macflag
 		;;
+	redmi,ax3000)
+		caldata_extract "0:ART" 0x26800 0x20000
+		;;
+	esac
+	;;
+"ath11k/qcn6122/hw1.0/caldata_1.bin")
+	case "$board" in
+	redmi,ax3000)
+		caldata_extract "0:ART" 0x26800 0x20000
+		;;
+	esac
+	;;
+"ath11k/qcn6122/hw1.0/cal-ahb-soc@0:wifi1@c000000.bin")
+	case "$board" in
 	redmi,ax3000)
 		caldata_extract "0:ART" 0x26800 0x20000
 		;;
